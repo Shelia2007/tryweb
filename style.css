@@ -1,0 +1,183 @@
+:root {
+  --active-color: #5c6b7a;
+  --active-hover-color: #273a4e;
+  --default-color: #303131;
+  --overlay-color: rgba(39, 58, 78, 0.34);
+  --font-weight: 300;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Cinzel", serif;
+}
+
+.active {
+  color: var(--active-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .container-fluid {
+  background-color: white;
+}
+
+header nav {
+  width: 90%;
+  height: 100%;
+  background-color: white;
+}
+
+header nav .navbar-nav {
+  gap: 20px;
+}
+
+header nav .collapse {
+  justify-content: flex-end;
+}
+
+header .header-text {
+  font-size: 26px;
+  color: var(--default-color);
+  font-weight: var(--font-weight);
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+}
+
+header nav ul li a {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: var(--active-color);
+}
+
+header nav ul li a:hover {
+  color: var(--active-hover-color);
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  row-gap: 20px;
+}
+
+main section {
+  width: 90%;
+}
+
+main .banner {
+  height: 900px;
+  background-image: url(https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_1743,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 5;
+}
+
+main .banner .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .banner .overlay div h1 {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+main .banner .overlay div p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.6em;
+}
+
+main .banner .overlay div div button {
+  width: 142px;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+main .banner .overlay div div button:hover {
+  background-color: var(--active-hover-color);
+  transition: 0.5s ease;
+  border: 0;
+}
+
+footer {
+  width: 90%;
+  margin: 10px auto 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+footer aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .top ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+footer .top ul li a {
+  color: var(--default-color);
+}
+
+footer .top ul li a:hover {
+  color: var(--active-hover-color);
+}
+
+.chat {
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  width: 64px;
+  height: 64px;
+  background-color: palevioletred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.chat i {
+  font-size: 35px;
+  color: white;
+}
